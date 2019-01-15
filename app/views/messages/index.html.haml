@@ -1,2 +1,19 @@
-%h1 Messages#index
-%p Find me in app/views/messages/index.html.haml
+.sidebar
+  .sidebar__user
+    .sidebar__user-content
+      .sidebar__user-name User Name
+      = link_to root_path, class: "sidebar__user--new-group" do
+        %i.fa.fa-edit
+      = link_to root_path, class: "sidebar__user--edit-user" do
+        %i.fa.fa-cog
+  .sidebar__groups
+    = link_to root_path, class: "sidebar__groups-link" do
+      .sidebar__group
+        .sidebar__group-name Group1
+        .sidebar__group-message まだメッセージはありません
+    = link_to root_path, class: "sidebar__groups-link" do
+      .sidebar__group
+        .sidebar__group-name Group2
+        .sidebar__group-message まだメッセージはありません
+
+

@@ -1,0 +1,51 @@
+@import "variable";
+
+.sidebar {
+  width: 300px;
+  height: 100vw;
+  background-color: $sidebar__groups-background;
+  box-sizing: border-box;
+  &__user {
+    background-color: $sidebar__user-background;
+    height:150px;
+    &-content {
+      height: 150px;
+      line-height: 150px;
+    }
+    &-name {
+      color: #FFFFFF;
+      font-size: 16px;
+      font-weight: bold;
+      margin: 0 20px;
+      display: inline;
+    }
+    &--new-group {
+
+      text-decoration: none;
+    }
+    .fa {
+      color: white;
+    }
+    .fa-edit {
+      margin-left: 90px;
+    }
+  }
+  &__groups-link {
+    text-decoration: none;
+  }
+  &__group {
+    color: #FFFFFF;
+    padding: 20px;
+   &-name {
+    font-size: 15px;
+    padding-bottom:5px;
+   }
+   &-message {
+    font-size: 11px;
+   }
+   &:hover {
+    background-color:lighten($sidebar__groups-background, 5%);
+   }
+  }
+}
+
