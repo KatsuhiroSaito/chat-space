@@ -2,15 +2,16 @@
 
 .sidebar {
   width: 300px;
-  height: 100vw;
+  height: 100vh;
   background-color: $sidebar__groups-background;
   box-sizing: border-box;
+  float: left;
   &__user {
     background-color: $sidebar__user-background;
-    height:150px;
+    height:140px;
     &-content {
-      height: 150px;
-      line-height: 150px;
+      height: 140px;
+      line-height: 140px;
     }
     &-name {
       color: #FFFFFF;
