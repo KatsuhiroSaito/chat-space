@@ -1,2 +1,76 @@
-%h1 Messages#index
-%p Find me in app/views/messages/index.html.haml
+.sidebar
+  .sidebar__user
+    .sidebar__user-content
+      .sidebar__user-name User Name
+      = link_to root_path, class: "sidebar__user--new-group" do
+        %i.fa.fa-edit
+      = link_to root_path, class: "sidebar__user--edit-user" do
+        %i.fa.fa-cog
+  .sidebar__groups
+    = link_to root_path, class: "sidebar__groups-link" do
+      .sidebar__group
+        .sidebar__group-name Group1
+        .sidebar__group-message まだメッセージはありません
+    = link_to root_path, class: "sidebar__groups-link" do
+      .sidebar__group
+        .sidebar__group-name Group2
+        .sidebar__group-message まだメッセージはありません
+.chat-main
+  .chat-main__header
+    .chat-main__header-group
+      .chat-main__header-group-name Sampleグループ
+      = link_to root_path, class: "chat-main__header-group-edit-btn" do
+        Edit
+    .chat-main__header-members
+      MEMBER:
+      %i Katsuhiro
+  .chat-main__body
+    .chat-main__messages-list
+      .chat-main__message
+        .chat-main__message-name Katsuhiro
+        .chat-main__message-time 2019/01/18 14:50:03
+        .chat-main__message-body sample message3
+      .chat-main__message
+        .chat-main__message-name Katsuhiro
+        .chat-main__message-time 2019/01/18 12:37:44
+        .chat-main__message-body sample message2
+      .chat-main__message
+        .chat-main__message-name Katsuhiro
+        .chat-main__message-time 2019/01/18 12:37:44
+        .chat-main__message-body sample message1
+      .chat-main__message
+        .chat-main__message-name Katsuhiro
+        .chat-main__message-time 2019/01/18 14:50:03
+        .chat-main__message-body sample message3
+      .chat-main__message
+        .chat-main__message-name Katsuhiro
+        .chat-main__message-time 2019/01/18 12:37:44
+        .chat-main__message-body sample message2
+      .chat-main__message
+        .chat-main__message-name Katsuhiro
+        .chat-main__message-time 2019/01/18 12:37:44
+        .chat-main__message-body sample message1
+        .chat-main__message
+        .chat-main__message-name Katsuhiro
+        .chat-main__message-time 2019/01/18 14:50:03
+        .chat-main__message-body sample message3
+      .chat-main__message
+        .chat-main__message-name Katsuhiro
+        .chat-main__message-time 2019/01/18 12:37:44
+        .chat-main__message-body sample message2
+      .chat-main__message
+        .chat-main__message-name Katsuhiro
+        .chat-main__message-time 2019/01/18 12:37:44
+        .chat-main__message-body sample message1
+      .chat-main__message
+        .chat-main__message-name Katsuhiro
+        .chat-main__message-time 2019/01/18 14:50:03
+        .chat-main__message-body sample message3
+  .chat-main__footer
+    %form.chat-main__footer-form
+      %input{type: "text", class: "chat-main__footer-form-text", placeholder: "type a message"}
+        %label{class: "chat-main__footer-form-file-input", for: "file-input"}
+          %i.fa.fa-image
+      %input{id: "file-input",type: "file"}
+      %input{type: "submit", class: "chat-main__footer-form-submit-btn", value: "Send"}
+
