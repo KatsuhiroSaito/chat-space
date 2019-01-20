@@ -1,4 +1,4 @@
-@import "variable";
+@import "colors";
 
 .sidebar {
   width: 300px;
@@ -14,7 +14,7 @@
       line-height: 140px;
     }
     &-name {
-      color: #FFFFFF;
+      color: $sidebar__user-name;
       font-size: 16px;
       font-weight: bold;
       margin: 0 20px;
@@ -25,7 +25,7 @@
       text-decoration: none;
     }
     .fa {
-      color: white;
+      color: $white;
     }
     .fa-edit {
       margin-left: 90px;
@@ -35,7 +35,7 @@
     text-decoration: none;
   }
   &__group {
-    color: #FFFFFF;
+    color: $sidebar__group;
     padding: 20px;
    &-name {
     font-size: 15px;
