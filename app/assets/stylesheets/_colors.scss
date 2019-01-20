@@ -1,0 +1,46 @@
+// basic colors
+$white: #fff;
+$darkCharcoal: #333333;
+$enboyClay: #253141;
+$pickledBluewood: #2f3e51;
+$gallery: #eeeeee;
+$dustyGray: #999999;
+$mako: #434A54;
+$submarine: #B8C3C7;
+$pictonBlue: #38AEF0;
+$internationalOrange: #F35500;
+
+
+// sidebar__user
+$sidebar__user-name: $white;
+$sidebar__user-background: $enboyClay;
+
+// sidebar__groups
+$sidebar__groups-background: $pickledBluewood;
+$sidebar__group: $white;
+
+// chat-main__header
+$chat-main__header-border: $gallery;
+$chat-main__header-group-name: $darkCharcoal;
+$chat-main__header-members: $dustyGray;
+$chat-main__header-group-edit-btn-border: $pictonBlue;
+
+// chat-main__body
+$chat-main__message-name: $mako;
+$chat-main__message-time: $dustyGray;
+
+// chat-main__footer
+$chat-main__footer-background:$submarine;
+$chat-main__footer-form-text: $mako;
+$chat-main__footer-form-submit-btn-background: $pictonBlue;
+$chat-main__footer-form-submit-btn: $white;
+
+// notifications
+$notifications-notice-background: $pictonBlue;
+$notifications-notice: $white;
+$notifications-alert-background: $internationalOrange;
+$notifications-alert: $white;
+
+
+
+

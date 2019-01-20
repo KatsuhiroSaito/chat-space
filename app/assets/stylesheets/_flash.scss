@@ -1,0 +1,15 @@
+@import "colors";
+
+.notification {
+  .notice {
+    background-color: $notifications-notice-background;
+    color: $notifications-notice;
+    text-align: center;
+  }
+
+  .alert {
+    background-color: $notifications-alert-background;
+    color: $notifications-alert;
+    text-align: center;
+  }
+}
