@@ -1,30 +1,16 @@
-.sidebar
-  .sidebar__user
-    .sidebar__user-content
-      .sidebar__user-name
-        = current_user.name
-      = link_to new_group_path, class: "sidebar__user--new-group" do
-        %i.fa.fa-edit
-      = link_to edit_user_path(current_user), class: "sidebar__user--edit-user" do
-        %i.fa.fa-cog
-  .sidebar__groups
-    = link_to root_path, class: "sidebar__groups-link" do
-      .sidebar__group
-        .sidebar__group-name Group1
-        .sidebar__group-message まだメッセージはありません
-    = link_to root_path, class: "sidebar__groups-link" do
-      .sidebar__group
-        .sidebar__group-name Group2
-        .sidebar__group-message まだメッセージはありません
+= render 'shared/side_bar'
+
 .chat-main
   .chat-main__header
     .chat-main__header-group
-      .chat-main__header-group-name Sampleグループ
-      = link_to root_path, class: "chat-main__header-group-edit-btn" do
+      .chat-main__header-group-name= @group.name
+      = link_to edit_group_path(@group), class: "chat-main__header-group-edit-btn" do
         Edit
     .chat-main__header-members
       MEMBER:
-      %i Katsuhiro
+      %i
+        - @group.users.each do |member|
+          = member.name
   .chat-main__body
     .chat-main__messages-list
       .chat-main__message
