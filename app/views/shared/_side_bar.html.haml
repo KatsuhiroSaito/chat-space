@@ -1,0 +1,15 @@
+.sidebar
+  .sidebar__user
+    .sidebar__user-content
+      .sidebar__user-name
+        = current_user.name
+      = link_to new_group_path, class: "sidebar__user--new-group" do
+        %i.fa.fa-edit
+      = link_to edit_user_path(current_user), class: "sidebar__user--edit-user" do
+        %i.fa.fa-cog
+  .sidebar__groups
+    = link_to root_path, class: "sidebar__groups-link" do
+      - current_user.groups.each do |group|
+        .sidebar__group
+          .sidebar__group-name= group.name
+          .sidebar__group-message まだメッセージはありません
