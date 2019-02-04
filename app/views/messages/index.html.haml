@@ -3,12 +3,14 @@
 .chat-main
   .chat-main__header
     .chat-main__header-group
-      .chat-main__header-group-name Sampleグループ
-      = link_to root_path, class: "chat-main__header-group-edit-btn" do
+      .chat-main__header-group-name= @group.name
+      = link_to edit_group_path(@group), class: "chat-main__header-group-edit-btn" do
         Edit
     .chat-main__header-members
       MEMBER:
-      %i Katsuhiro
+      %i
+        - @group.users.each do |member|
+          = member.name
   .chat-main__body
     .chat-main__messages-list
       .chat-main__message

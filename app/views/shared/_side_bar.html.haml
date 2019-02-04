@@ -8,8 +8,8 @@
       = link_to edit_user_path(current_user), class: "sidebar__user--edit-user" do
         %i.fa.fa-cog
   .sidebar__groups
-    = link_to root_path, class: "sidebar__groups-link" do
-      - current_user.groups.each do |group|
+    - current_user.groups.each do |group|
+      = link_to group_messages_path(group), class: "sidebar__groups-link" do
         .sidebar__group
           .sidebar__group-name= group.name
           .sidebar__group-message まだメッセージはありません
