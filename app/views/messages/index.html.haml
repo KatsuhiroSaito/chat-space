@@ -1,11 +1,5 @@
 = render 'shared/side_bar'
 
-- if @message.errors.any?
-  .message-errors
-    %ul
-      - @message.errors.full_messages.each do |message|
-        %li= message
-
 .chat-main
   .chat-main__header
     .chat-main__header-group
