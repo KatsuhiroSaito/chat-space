@@ -8,9 +8,9 @@
   float: left;
   &__user {
     background-color: $sidebar__user-background;
-    height:140px;
+    height:15%;
     &-content {
-      height: 140px;
+      height: 15px;
       line-height: 140px;
     }
     &-name {
@@ -31,7 +31,10 @@
       margin-left: 90px;
     }
   }
-  &__groups-link {
+  &__groups {
+    height: 85%;
+  }
+  &__group-list-link {
     text-decoration: none;
   }
   &__group {
