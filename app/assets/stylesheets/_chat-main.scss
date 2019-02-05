@@ -5,11 +5,6 @@
   width: calc( 100vw - 300px );
   height: 100vh;
   box-sizing: border-box;
-  &__errors {
-    background-color: $notifications-alert-background;
-    color: $notifications-alert;
-    text-align: center;
-  }
   &__header {
     border: 1px solid $chat-main__header-border;
     padding: 0 40px;
@@ -102,4 +97,11 @@
 }
 #file-input {
   display: none;
+}
+.message-errors {
+  background-color: $notifications-alert-background;
+    color: $notifications-alert;
+    text-align: center;
+    position: relative;
+    z-index: 8;
 }
