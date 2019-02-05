@@ -12,7 +12,6 @@ class MessagesController < ApplicationController
     else
       redirect_to action: :index
     end
-    # binding.pry
   end
 
   private
