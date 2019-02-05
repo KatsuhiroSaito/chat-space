@@ -13,3 +13,9 @@
     text-align: center;
   }
 }
+
+.message-errors {
+  background-color: $notifications-alert-background;
+    color: $notifications-alert;
+    text-align: center;
+}
