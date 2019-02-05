@@ -3,10 +3,11 @@
     .sidebar__user-content
       .sidebar__user-name
         = current_user.name
-      = link_to new_group_path, class: "sidebar__user--new-group" do
-        %i.fa.fa-edit
-      = link_to edit_user_path(current_user), class: "sidebar__user--edit-user" do
-        %i.fa.fa-cog
+      .sidebar__user-btns
+        = link_to new_group_path, class: "sidebar__user-btn--new-group" do
+          %i.fa.fa-edit
+        = link_to edit_user_path(current_user), class: "sidebar__user-btn--edit-user" do
+          %i.fa.fa-cog
   .sidebar__groups
     .sidebar__group-list
       - current_user.groups.each do |group|
