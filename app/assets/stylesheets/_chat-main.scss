@@ -38,31 +38,7 @@
     word-wrap:break-word;
     height: 76%;
     overflow-y: scroll;
-  }
-  &__messages-list {
     padding: 46px 40px 0 40px;
-  }
-  &__message {
-    padding-bottom: 40px;
-    &-name {
-      font-size: 16px;
-      display: inline;
-      font-weight: bold;
-      color: $chat-main__message-name;
-    }
-    &-time {
-      font-size: 12px;
-      display: inline;
-      color: $chat-main__message-time;
-      padding: 0 10px;
-    }
-    &-body {
-      padding-top: 10px;
-      padding-bottom: 40px;
-    }
-    &-image {
-      padding-bottom: 40px;
-    }
   }
   &__footer {
     background-color: $chat-main__footer-background;

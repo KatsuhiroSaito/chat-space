@@ -12,16 +12,7 @@
         - @group.users.each do |member|
           = member.name
   .chat-main__body
-    .chat-main__messages-list
-      .chat-main__message
-        - if @messages.present?
-          - @messages.each do |message|
-            .chat-main__message-name= message.user.name
-            .chat-main__message-time= message.created_at
-            .chat-main__message-body= message.body
-            - if message.image.present?
-              .chat-main__message-image
-                = image_tag message.image_url
+    = render @messages
   .chat-main__footer
     = form_for @message, url: {action: "create"} do |f|
       = f.text_field :body, class: 'chat-main__footer-form-text', placeholder: 'type a message'
