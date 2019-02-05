@@ -7,6 +7,7 @@ class UsersController < ApplicationController
        redirect_to root_path, notice: 'ユーザー情報を更新しました。'
 
     else
+      flash.now[:alert] = 'ユーザー情報の更新に失敗しました。'
       render :edit
     end
 
