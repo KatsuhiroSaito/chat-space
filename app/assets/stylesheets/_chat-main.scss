@@ -1,4 +1,6 @@
 @import "colors";
+@import "clearfix";
+
 
 .chat-main {
   float: left;
@@ -36,17 +38,19 @@
   }
   &__body {
     word-wrap:break-word;
-    height: 71%;
+    height: calc( 100vh - 15% - 138px );
     overflow-y: scroll;
     padding: 46px 40px 0 40px;
   }
   &__footer {
     background-color: $chat-main__footer-background;
-    padding: 20px 40px;
+    padding: 0 40px;
+    height: 90px;
     position: relative;
-    height: 5%;
+    @include clearfix();
     &-form-text {
     height: 50px;
+    margin: 20px 0;
     font-size: 16px;
     color: $chat-main__footer-form-text;
     width: calc( 100% - 135px );
@@ -59,6 +63,7 @@
       color: $chat-main__footer-form-submit-btn;
       width: 100px;
       height: 50px;
+      margin: 20px 0;
       border: none;
       margin-left: 15px;
       float: right;
