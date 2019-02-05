@@ -8,7 +8,7 @@
   &__header {
     border: 1px solid $chat-main__header-border;
     padding: 0 40px;
-    height: 140px;
+    height: 15%;
     position: relative;
     &-group {
       padding: 35px 0 15px;
@@ -36,7 +36,7 @@
   }
   &__body {
     word-wrap:break-word;
-    height: calc( 100vh - 140px - 90px );
+    height: 76%;
     overflow-y: scroll;
   }
   &__messages-list {
@@ -68,7 +68,7 @@
     background-color: $chat-main__footer-background;
     padding: 20px 40px;
     position: relative;
-    height: 49px;
+    height: 5%;
     &-form-text {
     height: 50px;
     font-size: 16px;
@@ -97,11 +97,4 @@
 }
 #file-input {
   display: none;
-}
-.message-errors {
-  background-color: $notifications-alert-background;
-    color: $notifications-alert;
-    text-align: center;
-    position: relative;
-    z-index: 8;
 }
