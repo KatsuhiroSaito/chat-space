@@ -73,6 +73,7 @@
     background-color: $chat-main__footer-background;
     padding: 20px 40px;
     position: relative;
+    height: 49px;
     &-form-text {
     height: 50px;
     font-size: 16px;
@@ -80,6 +81,7 @@
     width: calc( 100% - 135px );
     padding: 0 10px;
     border: none;
+    float: left
     }
     &-form-submit-btn {
       background-color: $chat-main__footer-form-submit-btn-background;
