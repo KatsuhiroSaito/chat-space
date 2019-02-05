@@ -1,7 +1,7 @@
 = render 'shared/side_bar'
 
 - if @message.errors.any?
-  .chat-main__errors
+  .message-errors
     %ul
       - @message.errors.full_messages.each do |message|
         %li= message
