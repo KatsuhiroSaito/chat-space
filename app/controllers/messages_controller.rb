@@ -1,8 +1,9 @@
 class MessagesController < ApplicationController
-  before_action :set_group, :set_messages
+  before_action :set_group
 
   def index
     @message = Message.new
+    @messages = @group.messages.includes(:user)
   end
 
   def create
@@ -10,6 +11,7 @@ class MessagesController < ApplicationController
     if @message.save
       redirect_to group_messages_path(@group)
     else
+      @messages = @group.messages.includes(:user)
       render :index
     end
 
@@ -24,7 +26,4 @@ class MessagesController < ApplicationController
     @group = Group.find(params[:group_id])
   end
 
-  def set_messages
-    @messages = @group.messages.includes(:user)
-  end
 end
