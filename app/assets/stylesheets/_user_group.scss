@@ -1,10 +1,12 @@
 @import "colors";
 
 .user-group {
-  padding: 20px;
+  box-sizing: border-box;
   &--link {
     text-decoration: none;
     color: $user-group;
+    display: block;
+    padding:20px;
   }
   &-name {
   font-size: 15px;
