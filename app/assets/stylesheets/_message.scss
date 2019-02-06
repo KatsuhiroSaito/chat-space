@@ -1,0 +1,26 @@
+@import "colors";
+
+.message {
+  &__upper {
+    padding-bottom: 10px;
+    &-name {
+      font-size: 16px;
+      display: inline;
+      font-weight: bold;
+      color: $chat-main__message-name;
+    }
+    &-time {
+      font-size: 12px;
+      display: inline;
+      color: $chat-main__message-time;
+      padding: 0 10px;
+    }
+  }
+  &__lower {
+    padding-bottom: 40px;
+    &-image {
+      padding-top: 20px;
+    }
+  }
+}
+
