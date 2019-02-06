@@ -3,7 +3,6 @@
 .sidebar {
   width: 300px;
   height: 100vh;
-  background-color: $sidebar__groups-background;
   box-sizing: border-box;
   float: left;
   &__user {
@@ -40,22 +39,6 @@
   &__groups {
     height: 85%;
     overflow-y: scroll;
-  }
-  &__group-list-link {
-    text-decoration: none;
-  }
-  &__group {
-    color: $sidebar__group;
-    padding: 20px;
-   &-name {
-    font-size: 15px;
-    padding-bottom:5px;
-   }
-   &-message {
-    font-size: 11px;
-   }
-   &:hover {
-    background-color:lighten($sidebar__groups-background, 5%);
-   }
+    background-color: $sidebar__groups-background;
   }
 }
