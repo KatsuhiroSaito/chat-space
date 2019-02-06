@@ -1,7 +1,7 @@
 .message
   .message__upper
     .message__upper-name= message.user.name
-    .message__upper-time= message.created_at
+    .message__upper-time= message.created_at.strftime("%Y/%m/%d %H:%M")
   .message__lower
     .message__lower-body= message.body
     = image_tag message.image_url, class: 'message__lower-image' if message.image.present?
