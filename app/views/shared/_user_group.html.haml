@@ -1,5 +1,4 @@
-.sidebar__group-list
-  = link_to group_messages_path(user_group), class: "sidebar__group-list-link" do
-    .sidebar__group
-      .sidebar__group-name= user_group.name
-      .sidebar__group-message まだメッセージはありません
+.user-group
+  = link_to group_messages_path(user_group), class: "user-group--link" do
+    .user-group-name= user_group.name
+    .user-group-message まだメッセージはありません
