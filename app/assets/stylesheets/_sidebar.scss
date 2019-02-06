@@ -39,6 +39,7 @@
   }
   &__groups {
     height: 85%;
+    overflow-y: scroll;
   }
   &__group-list-link {
     text-decoration: none;
