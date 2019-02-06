@@ -12,7 +12,7 @@
         - @group.users.each do |member|
           = member.name
   .chat-main__body
-    = render @messages
+    = render partial: 'message', collection: @messages
   .chat-main__footer.clearfix
     = form_for @message, url: {action: "create"} do |f|
       = f.text_field :body, class: 'chat-main__footer-form-text', placeholder: 'type a message'
