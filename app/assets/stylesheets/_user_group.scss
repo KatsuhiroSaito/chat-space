@@ -1,0 +1,20 @@
+@import "colors";
+
+.user-group {
+  padding: 20px;
+  &--link {
+    text-decoration: none;
+    color: $user-group;
+  }
+  &-name {
+  font-size: 15px;
+  padding-bottom:5px;
+  }
+  &-message {
+  font-size: 11px;
+  }
+  &:hover {
+  background-color:lighten($sidebar__groups-background, 5%);
+  }
+}
+
