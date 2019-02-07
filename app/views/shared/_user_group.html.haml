@@ -1,4 +1,4 @@
 .user-group
   = link_to group_messages_path(user_group), class: "user-group--link" do
     .user-group-name= user_group.name
-    .user-group-message まだメッセージはありません
+    .user-group-message= user_group.show_latest_message(user_group)
