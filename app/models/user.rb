@@ -8,7 +8,7 @@ class User < ApplicationRecord
   has_many :groups, through: :members
   has_many :members
 
-  validates :name, presence: true
+  validates :name, presence: true, length: {maximum: 13}
   validates :name, uniqueness: true
 
 end
