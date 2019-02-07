@@ -9,9 +9,4 @@
         = link_to edit_user_path(current_user), class: "sidebar__user-btn--edit-user" do
           %i.fa.fa-cog
   .sidebar__groups
-    .sidebar__group-list
-      - current_user.groups.each do |group|
-        = link_to group_messages_path(group), class: "sidebar__group-list-link" do
-          .sidebar__group
-            .sidebar__group-name= group.name
-            .sidebar__group-message まだメッセージはありません
+    = render partial: 'shared/user_group', collection: @groups
