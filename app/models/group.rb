@@ -6,7 +6,7 @@ class Group < ApplicationRecord
 
   def show_latest_message(user_group)
     if (latest_message = user_group.messages.first).present?
-      latest_message.body? ? latest_message.body : "画像が投稿されました"
+      latest_message.body? ? latest_message.body.truncate(50, separator: ' ') : "画像が投稿されました"
     else
       "まだメッセージはありません。"
     end
