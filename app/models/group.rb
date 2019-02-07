@@ -5,8 +5,8 @@ class Group < ApplicationRecord
   validates :name, presence: true
 
   def show_latest_message(user_group)
-    if (last_message = user_group.messages.first).present?
-      last_message.body? ? last_message.body : "画像が投稿されました"
+    if (latest_message = user_group.messages.first).present?
+      latest_message.body? ? latest_message.body : "画像が投稿されました"
     else
       "まだメッセージはありません。"
     end
