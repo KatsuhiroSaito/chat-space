@@ -4,6 +4,7 @@ describe MessagesController do
   let(:group) { create(:group) }
   let(:user) { create(:user) }
 
+
   describe 'GET #index' do
     context "logged in" do
       before do
@@ -18,6 +19,10 @@ describe MessagesController do
       it "populates an array of messages" do
         messages = create_list(:message, 3, group_id: group.id)
         expect(assigns(:messages)).to match(messages)
+      end
+
+      it "populates an array of groups" do
+        # テストの仕方わからず。。。。。
       end
 
       it "renders the :index template" do
