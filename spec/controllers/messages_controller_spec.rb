@@ -11,6 +11,10 @@ describe MessagesController do
         get :index, params: { group_id: group.id }
       end
 
+      it "assigns @message" do
+        expect(assigns(:message)).to be_a_new(Message)
+      end
+
       it "renders the :index template" do
         expect(response).to render_template :index
       end
