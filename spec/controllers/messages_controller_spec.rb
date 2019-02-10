@@ -15,6 +15,11 @@ describe MessagesController do
         expect(assigns(:message)).to be_a_new(Message)
       end
 
+      it "populates an array of messages" do
+        messages = create_list(:message, 3, group_id: group.id)
+        expect(assigns(:messages)).to match(messages)
+      end
+
       it "renders the :index template" do
         expect(response).to render_template :index
       end
