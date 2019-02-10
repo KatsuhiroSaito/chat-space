@@ -21,6 +21,14 @@ describe MessagesController do
     end
 
     context "not logged in" do
+      before do
+        get :index, params: { group_id: group.id }
+      end
+
+      it "redirects to the sign-in page" do
+        # expect(response).to redirect_to("/users/sign_in")
+        expect(response).to redirect_to(new_user_session_path)
+      end
     end
   end
 end
