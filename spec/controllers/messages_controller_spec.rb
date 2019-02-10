@@ -11,6 +11,9 @@ describe MessagesController do
         get :index, params: { group_id: group.id }
       end
 
+      it "renders the :index template" do
+        expect(response).to render_template :index
+      end
     end
 
     context "not logged in" do
