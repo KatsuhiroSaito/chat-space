@@ -5,19 +5,21 @@ $(function(){
     if (message.image["url"] !== null) {
         img = `<img class="message__lower-image" src="${message.image.url}">`
     }
-    var html = `<div class="message__upper">
-                  <div class="message__upper-name">
-                    ${message.user_name}
+    var html = `<div class="message">
+                  <div class="message__upper">
+                    <div class="message__upper-name">
+                      ${message.user_name}
+                    </div>
+                    <div class="message__upper-time">
+                      ${message.created_at}
+                    </div>
                   </div>
-                  <div class="message__upper-time">
-                    ${message.created_at}
+                  <div class="message__lower">
+                    <div class="message__lower-body">
+                      ${message.body}
+                    </div>
+                    ${ img }
                   </div>
-                </div>
-                <div class="message__lower">
-                  <div class="message__lower-body">
-                    ${message.body}
-                  </div>
-                  ${ img }
                 </div>`
     return html;
   };
