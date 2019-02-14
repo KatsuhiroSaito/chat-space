@@ -41,5 +41,9 @@ $(function(){
       $('.chat-main__body').append(html)
       $('.chat-main__footer-form-text').val('')
     })
+
+    .fail(function() {
+      alert('error');
+    })
   });
 });
