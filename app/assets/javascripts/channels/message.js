@@ -27,7 +27,7 @@ $(function(){
   $('#new_message').on('submit', function(e){
     e.preventDefault();
     var formData = new FormData(this);
-    var url = $(this).attr('action')
+    var url = $(this).attr('action');
 
     $.ajax({
       url: url,
@@ -40,9 +40,10 @@ $(function(){
 
     .done(function(data){
       var html = buildHTML(data);
-      $('.chat-main__body').append(html)
-      $('.chat-main__footer-form-text').val('')
+      $('.chat-main__body').append(html);
+      $('.chat-main__footer-form-text').val('');
       $('.chat-main__footer-form-submit-btn').removeAttr("disabled");
+      $('.chat-main__body').animate({scrollTop: $('.chat-main__body')[0].scrollHeight}, 'fast');
     })
 
     .fail(function() {
