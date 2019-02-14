@@ -13,6 +13,7 @@ class MessagesController < ApplicationController
       redirect_to group_messages_path(@group), notice: 'メッセージを送信しました。'
     else
       @messages = @group.messages.includes(:user)
+      @groups = current_user.groups.includes(:messages).order("messages.created_at desc")
       render :index
     end
 
