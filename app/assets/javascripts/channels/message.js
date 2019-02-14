@@ -1,5 +1,5 @@
 $(function(){
-  function buildHTML(message){
+  function buildNewMessageHTML(message){
 
     var img = "";
     if (message.image["url"] !== null) {
@@ -39,7 +39,7 @@ $(function(){
     })
 
     .done(function(data){
-      var html = buildHTML(data);
+      var html = buildNewMessageHTML(data);
       $('.chat-main__body').append(html);
       $('.chat-main__footer-form-text').val('');
       $('.chat-main__body').animate({scrollTop: $('.chat-main__body')[0].scrollHeight}, 'fast');
