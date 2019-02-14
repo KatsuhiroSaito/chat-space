@@ -42,6 +42,7 @@ $(function(){
       var html = buildHTML(data);
       $('.chat-main__body').append(html)
       $('.chat-main__footer-form-text').val('')
+      $('.chat-main__footer-form-submit-btn').removeAttr("disabled");
     })
 
     .fail(function() {
