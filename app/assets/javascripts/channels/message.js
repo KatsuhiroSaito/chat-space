@@ -3,7 +3,7 @@ $(function(){
 
     var img = "";
     if (message.image["url"] !== null) {
-        img = `<img class="message__lower-image" src="${message.image.url}">`
+        img = `<img class="message__lower-image" src="${message.image.url}">`;
     }
     var html = `<div class="message">
                   <div class="message__upper">
