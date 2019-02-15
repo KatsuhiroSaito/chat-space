@@ -20,6 +20,7 @@ $(function(){
     })
 
     .done(function(users) {
+      $(".chat-group-user").empty();
       if (users.length !== 0) {
         users.forEach(function(user){
           appendUser(user);
