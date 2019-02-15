@@ -36,6 +36,9 @@ $(function(){
       else {
         appendNoUser("該当するユーザーはいません");
       }
+      if (input == "") {
+        $("#user-search-result").empty();
+      }
     })
 
     .fail(function() {
