@@ -17,6 +17,11 @@ $(function(){
     })
 
     .done(function(users) {
+      if (users.length !== 0) {
+        users.forEach(function(user){
+          appendUser(user);
+        });
+      }
     })
 
     .fail(function() {
