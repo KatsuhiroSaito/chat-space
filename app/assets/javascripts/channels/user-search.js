@@ -1,4 +1,6 @@
 $(function(){
+  var search_list = $(".chat-group-form__field--right");
+
   function appendUser(user) {
     var html = `<div class="chat-group-user clearfix">
                   <p class="chat-group-user__name">ユーザー名</p>
