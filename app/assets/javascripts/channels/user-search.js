@@ -31,7 +31,7 @@ $(function(){
     })
 
     .done(function(users) {
-      search_list.empty();
+      emptySearchList()
       if (users.length !== 0) {
         users.forEach(function(user){
           appendUser(user);
@@ -41,7 +41,7 @@ $(function(){
         appendNoUser("該当するユーザーはいません");
       }
       if (input == "") {
-        $("#user-search-result").empty();
+        emptySearchList()
       }
     })
 
