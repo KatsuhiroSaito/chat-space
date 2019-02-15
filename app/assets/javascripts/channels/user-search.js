@@ -18,6 +18,7 @@ $(function(){
 
   $("#user-search-field").on("keyup", function() {
     var input = $("#user-search-field").val();
+    var empty_search_list = search_list.empty();
 
     $.ajax({
       type: 'GET',
