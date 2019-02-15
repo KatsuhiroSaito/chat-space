@@ -9,7 +9,7 @@ $(function(){
     search_list.append(html);
   }
 
-  function appendUser(user) {
+  function appendNoUser(user) {
     var html = `<div class="chat-group-user clearfix">
                   <p class="chat-group-user__name">${ user }</p>
                 </div>`
