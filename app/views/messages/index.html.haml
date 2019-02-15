@@ -14,7 +14,7 @@
   .chat-main__body
     = render partial: 'message', collection: @messages
   .chat-main__footer.clearfix
-    = form_for [@group, @message] do |f|
+    = form_for [@group, @message], :html => {:id => "new_message"} do |f|
       = f.text_field :body, class: 'chat-main__footer-form-text', placeholder: 'type a message'
       %label{class: "chat-main__footer-form-file-input", for: "file-input"}
         %i.fa.fa-image
