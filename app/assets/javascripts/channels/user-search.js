@@ -27,7 +27,7 @@ $(function(){
     })
 
     .done(function(users) {
-      $("#user-search-result").empty();
+      search_list.empty();
       if (users.length !== 0) {
         users.forEach(function(user){
           appendUser(user);
