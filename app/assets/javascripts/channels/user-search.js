@@ -33,6 +33,9 @@ $(function(){
           appendUser(user);
         });
       }
+      else {
+        appendNoUser("該当するユーザーはいません");
+      }
     })
 
     .fail(function() {
