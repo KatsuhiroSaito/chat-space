@@ -16,9 +16,12 @@ $(function(){
     search_list.append(html);
   }
 
+  function emptySearchList() {
+    search_list.empty();
+  }
+
   $("#user-search-field").on("keyup", function() {
     var input = $("#user-search-field").val();
-    var empty_search_list = search_list.empty();
 
     $.ajax({
       type: 'GET',
