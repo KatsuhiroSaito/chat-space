@@ -20,6 +20,10 @@ $(function(){
     user_search_result.empty();
   }
 
+  function addedUser() {
+
+  }
+
   $("#user-search-field").on("keyup", function() {
     var input = $("#user-search-field").val();
 
