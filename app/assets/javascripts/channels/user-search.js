@@ -20,7 +20,7 @@ $(function(){
     user_search_result.empty();
   }
 
-  function addedUser() {
+  function addedUser(user_name, user_id) {
     var html = `<div class='chat-group-user clearfix js-chat-member' id='chat-group-user-8'>
                   <input name='group[user_ids][]' type='hidden' value='${ user_id }'>
                   <p class='chat-group-user__name'>${ user_name }</p>
