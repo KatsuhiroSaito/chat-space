@@ -9,9 +9,9 @@ $(function(){
     user_search_result.append(html);
   }
 
-  function appendNoUser(user) {
+  function appendNoUser(message) {
     var html = `<div class="chat-group-user clearfix">
-                  <p class="chat-group-user__name">${ user }</p>
+                  <p class="chat-group-user__name">${ message }</p>
                 </div>`
     user_search_result.append(html);
   }
