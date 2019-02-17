@@ -47,7 +47,9 @@ $(function(){
 
       if (users.length !== 0) {
         users.forEach(function(user){
-          appendUser(user);
+          if ($.inArray(user.id.toString(), alreadyMemberIds) == -1) {
+            appendUser(user);
+          }
         });
       }
       else {
