@@ -20,7 +20,7 @@ $(function(){
     user_search_result.empty();
   }
 
-  function addedUser(user_name, user_id) {
+  function addUser(user_name, user_id) {
     var html = `<div class='chat-group-user clearfix js-chat-member' id='chat-group-user-8'>
                   <input name='group[user_ids][]' type='hidden' value='${ user_id }'>
                   <p class='chat-group-user__name'>${ user_name }</p>
@@ -64,6 +64,6 @@ $(function(){
     $(this).parent().remove();
     user_name = $(this).attr("data-user-name");
     user_id = $(this).attr("data-user-id");
-    addedUser(user_name, user_id);
+    addUser(user_name, user_id);
   });
 });
