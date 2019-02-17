@@ -9,7 +9,7 @@ $(function(){
     user_search_result.append(html);
   }
 
-  function appendNoUser(message) {
+  function appendNoMatchedResult(message) {
     var html = `<div class="chat-group-user clearfix">
                   <p class="chat-group-user__name">${ message }</p>
                 </div>`
@@ -53,7 +53,7 @@ $(function(){
         });
       }
       else {
-        appendNoUser("該当するユーザーはいません");
+        appendNoMatchedResult("該当するユーザーはいません");
       }
       if (input == "") {
         emptySearchResult()
