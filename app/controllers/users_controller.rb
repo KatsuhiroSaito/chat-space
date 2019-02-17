@@ -5,6 +5,7 @@ class UsersController < ApplicationController
   end
 
   def edit
+    redirect_to root_path, alert: "あなたには権限がありません" if params[:id].to_i != current_user.id
   end
 
   def update
