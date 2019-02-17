@@ -28,6 +28,16 @@ class MessagesController < ApplicationController
 
   def set_group
     @group = Group.find(params[:group_id])
+    user_authorized?(@group)
+  end
+
+  def user_authorized?(group)
+    member_ids = []
+    group.members.each do |member|
+      member_ids << member.user_id
+    end
+
+    redirect_to root_path, alert: "あなたには権限がありません" unless member_ids.include?(current_user.id)
   end
 
 end
