@@ -61,7 +61,7 @@ $(function(){
   }
 
   $("#user-search-field").on("keyup", function() {
-
+    searchUsers ();
   });
 
   $(document).on("click", ".chat-group-user__btn--add", function(){
