@@ -64,6 +64,10 @@ $(function(){
 
   function alreadyAddedUsers (alreadyMemberIds){
     var added_users_num = $(".chat-group-user-input").length;
+    for (var number = 0; number < added_users_num; number += 1) {
+      alreadyMemberIds.push($(".chat-group-user-input").eq(number).attr("value"));
+    }
+    return alreadyMemberIds;
   }
 
   $("#user-search-field").on("keyup", function() {
