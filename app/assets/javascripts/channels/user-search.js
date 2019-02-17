@@ -80,7 +80,7 @@ $(function(){
   $(document).on("click", ".chat-group-user__btn--add", function(){
     $(this).parent().remove();
     var user_name = $(this).attr("data-user-name");
-    user_id = $(this).attr("data-user-id");
+    var user_id = $(this).attr("data-user-id");
     addUser(user_name, user_id);
   });
 
