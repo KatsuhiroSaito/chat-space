@@ -42,12 +42,12 @@ $(function(){
 
     .done(function(users) {
       emptySearchResult()
-      var alreadyMemberIds = [];
-      alreadyMemberIds = alreadyAddedUsers (alreadyMemberIds);
+      var alreadyAddedMemberIds = [];
+      alreadyAddedMemberIds = alreadyAddedUsers (alreadyAddedMemberIds);
 
       if (users.length !== 0) {
         users.forEach(function(user){
-          if ($.inArray(user.id.toString(), alreadyMemberIds) == -1) {
+          if ($.inArray(user.id.toString(), alreadyAddedMemberIds) == -1) {
             appendUser(user);
           }
         });
@@ -65,12 +65,12 @@ $(function(){
     })
   }
 
-  function alreadyAddedUsers (alreadyMemberIds){
+  function alreadyAddedUsers (alreadyAddedMemberIds){
     var added_users_num = $(".chat-group-user-input").length;
     for (var number = 0; number < added_users_num; number += 1) {
-      alreadyMemberIds.push($(".chat-group-user-input").eq(number).attr("value"));
+      alreadyAddedMemberIds.push($(".chat-group-user-input").eq(number).attr("value"));
     }
-    return alreadyMemberIds;
+    return alreadyAddedMemberIds;
   }
 
   $("#user-search-field").on("keyup", function() {
