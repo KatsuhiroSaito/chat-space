@@ -43,6 +43,7 @@ $(function(){
     .done(function(users) {
       emptySearchResult()
       var alreadyMemberIds = [];
+      alreadyMemberIds = alreadyAddedUsers (alreadyMemberIds);
 
       if (users.length !== 0) {
         users.forEach(function(user){
