@@ -25,7 +25,7 @@
         - if @members
           - @members.each do |member|
             .chat-group-user.clearfix{id: "chat-group-user-#{member.id}"}
-              %input{name: "group[user_ids][]", type: "hidden", value: "#{member.id}"}
+              %input.chat-group-user-input{name: "group[user_ids][]", type: "hidden", value: "#{member.id}"}
               %p.chat-group-user__name= member.name
   .chat-group-form__field.clearfix
     .chat-group-form__field--left
