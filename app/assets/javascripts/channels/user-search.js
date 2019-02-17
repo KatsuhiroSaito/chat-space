@@ -30,6 +30,10 @@ $(function(){
     $("#chat-group-users").append(html);
   }
 
+  function searchUsers () {
+
+  }
+
   $("#user-search-field").on("keyup", function() {
     var input = $("#user-search-field").val();
 
