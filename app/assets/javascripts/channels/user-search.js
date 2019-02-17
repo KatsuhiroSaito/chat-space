@@ -62,6 +62,9 @@ $(function(){
     })
   }
 
+  function alreadyAddedUsers (alreadyMemberIds){
+  }
+
   $("#user-search-field").on("keyup", function() {
     searchUsers ();
   });
