@@ -66,4 +66,8 @@ $(function(){
     user_id = $(this).attr("data-user-id");
     addUser(user_name, user_id);
   });
+
+  $(document).on("click", ".chat-group-user__btn--remove", function(){
+    $(this).parent().remove();
+  });
 });
