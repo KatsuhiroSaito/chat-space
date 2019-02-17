@@ -73,5 +73,6 @@ $(function(){
 
   $(document).on("click", ".chat-group-user__btn--remove", function(){
     $(this).parent().remove();
+    searchUsers ();
   });
 });
