@@ -30,10 +30,6 @@ $(function(){
     $('.chat-main__body').animate({scrollTop: $('.chat-main__body')[0].scrollHeight}, 'fast');
   }
 
-  $(function(){
-    setInterval(auto_reload, 5000);
-  });
-
   function auto_reload() {
     if($('.message')[0]) {
       var latest_message_id = $('.message:last').attr('data-id');
@@ -83,4 +79,6 @@ $(function(){
       $('.chat-main__footer-form-submit-btn').removeAttr("disabled");
     })
   });
+
+  setInterval(auto_reload, 5000);
 });
