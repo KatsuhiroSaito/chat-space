@@ -40,7 +40,7 @@ $(function(){
       dataType: 'json'
     })
 
-    .always(function(data){
+    .always(function(undisplayed_messages){
     })
   };
 
