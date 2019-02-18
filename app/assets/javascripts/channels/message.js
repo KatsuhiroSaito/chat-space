@@ -39,6 +39,9 @@ $(function(){
       },
       dataType: 'json'
     })
+
+    .always(function(data){
+    })
   };
 
   $('#new_message').on('submit', function(e){
