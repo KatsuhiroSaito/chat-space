@@ -29,7 +29,7 @@ $(function(){
   });
 
   function auto_reload() {
-
+    var latest_message_id = $('.message:last').attr('data-id');
   }
 
   $('#new_message').on('submit', function(e){
