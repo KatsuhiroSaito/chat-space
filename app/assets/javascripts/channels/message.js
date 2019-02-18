@@ -5,7 +5,7 @@ $(function(){
     if (message.image["url"] !== null) {
         img = `<img class="message__lower-image" src="${message.image.url}">`;
     }
-    var html = `<div class="message">
+    var html = `<div class="message" data-id="${message.id}">
                   <div class="message__upper">
                     <div class="message__upper-name">
                       ${message.user_name}
