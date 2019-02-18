@@ -7,6 +7,7 @@ class MessagesController < ApplicationController
     @groups = current_user.groups.includes(:messages).order("messages.created_at desc")
 
     respond_to do |format|
+      format.html
     end
   end
 
