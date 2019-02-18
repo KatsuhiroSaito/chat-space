@@ -35,7 +35,11 @@ $(function(){
   });
 
   function auto_reload() {
-    var latest_message_id = $('.message:last').attr('data-id');
+    if($('.message')[0]) {
+      var latest_message_id = $('.message:last').attr('data-id');
+    } else {
+      var latest_message_id = 0;
+    }
 
     $.ajax({
       url: location.href,
