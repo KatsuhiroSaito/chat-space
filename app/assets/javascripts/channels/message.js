@@ -50,7 +50,7 @@ $(function(){
       dataType: 'json'
     })
 
-    .always(function(undisplayed_messages){
+    .done(function(undisplayed_messages){
       $.each(undisplayed_messages, function(i, undisplayed_message) {
         appendNewMessageHTML(undisplayed_message);
       });
