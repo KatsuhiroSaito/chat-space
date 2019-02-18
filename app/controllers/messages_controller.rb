@@ -5,6 +5,9 @@ class MessagesController < ApplicationController
     @message = Message.new
     @messages = @group.messages.includes(:user)
     @groups = current_user.groups.includes(:messages).order("messages.created_at desc")
+
+    respond_to do |format|
+    end
   end
 
   def create
