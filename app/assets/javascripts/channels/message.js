@@ -25,6 +25,9 @@ $(function(){
   };
 
   function appendNewMessageHTML (message) {
+    var html = buildNewMessageHTML(message);
+    $('.chat-main__body').append(html);
+    $('.chat-main__body').animate({scrollTop: $('.chat-main__body')[0].scrollHeight}, 'fast');
   }
 
   $(function(){
