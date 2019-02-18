@@ -24,6 +24,10 @@ $(function(){
     return html;
   };
 
+  $(function(){
+    setInterval(auto_reload, 5000);
+  });
+
   $('#new_message').on('submit', function(e){
     e.preventDefault();
     var formData = new FormData(this);
