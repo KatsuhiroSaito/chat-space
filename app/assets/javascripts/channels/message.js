@@ -44,9 +44,7 @@ $(function(){
     $.ajax({
       url: location.href,
       type: 'GET',
-      data: {
-        message: { id: latest_message_id }
-      },
+      data: { message: { id: latest_message_id } },
       dataType: 'json'
     })
 
