@@ -41,6 +41,8 @@ $(function(){
     })
 
     .always(function(undisplayed_messages){
+      $.each(undisplayed_messages, function(i, undisplayed_message) {
+      });
     })
   };
 
