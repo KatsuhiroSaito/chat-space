@@ -8,6 +8,7 @@ class MessagesController < ApplicationController
 
     respond_to do |format|
       format.html
+      format.json { @undisplayed_new_messages = Message.where('id > ?', params[:message][:id]).where(group_id: params[:group_id]) }
     end
   end
 
