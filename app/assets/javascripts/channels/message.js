@@ -24,6 +24,9 @@ $(function(){
     return html;
   };
 
+  function appendNewMessageHTML (message) {
+  }
+
   $(function(){
     setInterval(auto_reload, 5000);
   });
