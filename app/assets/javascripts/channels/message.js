@@ -77,6 +77,7 @@ $(function(){
   });
 
   $('#file-input').change(function() {
+    var image_title = $('#file-input')[0].files[0].name;
   });
 
   setInterval(auto_update, 5000);
