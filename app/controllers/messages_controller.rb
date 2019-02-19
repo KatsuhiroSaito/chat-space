@@ -5,6 +5,11 @@ class MessagesController < ApplicationController
     @message = Message.new
     @messages = @group.messages.includes(:user)
     @groups = current_user.groups.includes(:messages).order("messages.created_at desc")
+
+    respond_to do |format|
+      format.html
+      format.json { @undisplayed_new_messages = @messages.where('id > ?', params[:message][:id]) }
+    end
   end
 
   def create

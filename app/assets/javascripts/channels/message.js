@@ -5,7 +5,7 @@ $(function(){
     if (message.image["url"] !== null) {
         img = `<img class="message__lower-image" src="${message.image.url}">`;
     }
-    var html = `<div class="message">
+    var html = `<div class="message" data-id="${message.id}">
                   <div class="message__upper">
                     <div class="message__upper-name">
                       ${message.user_name}
@@ -24,6 +24,32 @@ $(function(){
     return html;
   };
 
+  function appendNewMessageHTML (message) {
+    var html = buildNewMessageHTML(message);
+    $('.chat-main__body').append(html);
+    $('.chat-main__body').animate({scrollTop: $('.chat-main__body')[0].scrollHeight}, 'fast');
+  }
+
+  function auto_update() {
+    if($('.message')[0]) {
+      var latest_message_id = $('.message:last').attr('data-id');
+    } else {
+      var latest_message_id = 0;
+    }
+
+    $.ajax({
+      url: location.href,
+      type: 'GET',
+      data: { message: { id: latest_message_id } },
+      dataType: 'json'
+    })
+    .done(function(undisplayed_messages){
+      $.each(undisplayed_messages, function(i, undisplayed_message) {
+        appendNewMessageHTML(undisplayed_message);
+      });
+    })
+  };
+
   $('#new_message').on('submit', function(e){
     e.preventDefault();
     var formData = new FormData(this);
@@ -37,20 +63,18 @@ $(function(){
       processData: false,
       contentType: false
     })
-
     .done(function(message){
       var html = buildNewMessageHTML(message);
-      $('.chat-main__body').append(html);
+      appendNewMessageHTML(message);
       $('.chat-main__footer-form-text').val('');
-      $('.chat-main__body').animate({scrollTop: $('.chat-main__body')[0].scrollHeight}, 'fast');
     })
-
     .fail(function() {
       alert('error');
     })
-
     .always(function() {
       $('.chat-main__footer-form-submit-btn').removeAttr("disabled");
     })
   });
+
+  setInterval(auto_update, 5000);
 });
