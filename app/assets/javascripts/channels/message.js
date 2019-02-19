@@ -30,8 +30,9 @@ $(function(){
     $('.chat-main__body').animate({scrollTop: $('.chat-main__body')[0].scrollHeight}, 'fast');
   };
 
-  function changeMessageFormStyle(placeholder, icon_color) {
-
+  function changeMessageFormStyle(placeholder_text, icon_color) {
+    $('.fa-image').css('color', icon_color);
+    $('.chat-main__footer-form-text').attr('placeholder', `placeholder_text`);
   };
 
   function auto_update() {
