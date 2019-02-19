@@ -32,7 +32,7 @@ $(function(){
 
   function changeMessageFormStyle(placeholder_text, icon_color) {
     $('.fa-image').css('color', icon_color);
-    $('.chat-main__footer-form-text').attr('placeholder', `placeholder_text`);
+    $('.chat-main__footer-form-text').attr('placeholder', placeholder_text);
   };
 
   function auto_update() {
