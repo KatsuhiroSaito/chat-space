@@ -83,6 +83,7 @@ $(function(){
 
   $('#file-input').change(function() {
     var image_title = $('#file-input')[0].files[0].name;
+    changeMessageFormStyle(`type a message (${image_title}を選択中)`, "#38AEF0");
   });
 
   setInterval(auto_update, 5000);
