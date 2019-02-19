@@ -28,7 +28,12 @@ $(function(){
     var html = buildNewMessageHTML(message);
     $('.chat-main__body').append(html);
     $('.chat-main__body').animate({scrollTop: $('.chat-main__body')[0].scrollHeight}, 'fast');
-  }
+  };
+
+  function changeMessageFormStyle(placeholder_text, icon_color) {
+    $('.fa-image').css('color', icon_color);
+    $('.chat-main__footer-form-text').attr('placeholder', placeholder_text);
+  };
 
   function auto_update() {
     if($('.message')[0]) {
@@ -67,6 +72,7 @@ $(function(){
       var html = buildNewMessageHTML(message);
       appendNewMessageHTML(message);
       $('.chat-main__footer-form-text').val('');
+      changeMessageFormStyle("type a message", "black");
     })
     .fail(function() {
       alert('error');
@@ -74,6 +80,11 @@ $(function(){
     .always(function() {
       $('.chat-main__footer-form-submit-btn').removeAttr("disabled");
     })
+  });
+
+  $('#file-input').change(function() {
+    var image_title = $('#file-input')[0].files[0].name;
+    changeMessageFormStyle(`type a message (${image_title}を選択中)`, "#38AEF0");
   });
 
   setInterval(auto_update, 5000);
