@@ -28,7 +28,11 @@ $(function(){
     var html = buildNewMessageHTML(message);
     $('.chat-main__body').append(html);
     $('.chat-main__body').animate({scrollTop: $('.chat-main__body')[0].scrollHeight}, 'fast');
-  }
+  };
+
+  function changeMessageFormStyle(placeholder, icon_color) {
+
+  };
 
   function auto_update() {
     if($('.message')[0]) {
