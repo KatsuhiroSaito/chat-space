@@ -43,7 +43,6 @@ $(function(){
       data: { message: { id: latest_message_id } },
       dataType: 'json'
     })
-
     .done(function(undisplayed_messages){
       $.each(undisplayed_messages, function(i, undisplayed_message) {
         appendNewMessageHTML(undisplayed_message);
@@ -64,17 +63,14 @@ $(function(){
       processData: false,
       contentType: false
     })
-
     .done(function(message){
       var html = buildNewMessageHTML(message);
       appendNewMessageHTML(message);
       $('.chat-main__footer-form-text').val('');
     })
-
     .fail(function() {
       alert('error');
     })
-
     .always(function() {
       $('.chat-main__footer-form-submit-btn').removeAttr("disabled");
     })

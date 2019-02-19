@@ -39,7 +39,6 @@ $(function(){
       data: { keyword: input },
       dataType: 'json'
     })
-
     .done(function(users) {
       emptySearchResult()
       var alreadyAddedMemberIds = [];
@@ -59,7 +58,6 @@ $(function(){
         emptySearchResult()
       }
     })
-
     .fail(function() {
       alert('ユーザー検索に失敗しました');
     })
