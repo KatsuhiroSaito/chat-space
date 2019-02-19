@@ -76,5 +76,8 @@ $(function(){
     })
   });
 
+  $('#file-input').change(function() {
+  });
+
   setInterval(auto_update, 5000);
 });
