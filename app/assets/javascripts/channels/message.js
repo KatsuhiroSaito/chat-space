@@ -72,6 +72,7 @@ $(function(){
       var html = buildNewMessageHTML(message);
       appendNewMessageHTML(message);
       $('.chat-main__footer-form-text').val('');
+      changeMessageFormStyle("type a message", "black");
     })
     .fail(function() {
       alert('error');
