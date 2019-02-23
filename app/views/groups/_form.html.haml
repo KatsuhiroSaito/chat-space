@@ -23,10 +23,15 @@
     .chat-group-form__field--right
       #chat-group-users
         - if @members
+          .chat-group-user.clearfix{id: "chat-group-user-#{current_user.id}"}
+            %input.chat-group-user-input{name: "group[user_ids][]", type: "hidden", value: "#{current_user.id}"}
+            %p.chat-group-user__name= current_user.name
           - @members.each do |member|
             .chat-group-user.clearfix{id: "chat-group-user-#{member.id}"}
               %input.chat-group-user-input{name: "group[user_ids][]", type: "hidden", value: "#{member.id}"}
               %p.chat-group-user__name= member.name
+              %a.user-search-remove.chat-group-user__btn.chat-group-user__btn--remove.js-remove-btn 削除
+
   .chat-group-form__field.clearfix
     .chat-group-form__field--left
     .chat-group-form__field--right
