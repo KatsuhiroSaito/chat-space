@@ -12,6 +12,6 @@ CarrierWave.configure do |config|
     region: '※自分で調べて入れてください'
   }
 
-  config.fog_directory  = 'ここにバケット名を入れます'
-  config.asset_host = 'https://s3-ここにリージョン名を入れます(※例、us-east-1).amazonaws.com/ここにバケット名を入れます'
+  config.fog_directory  = 'chatspace-images-upload'
+  config.asset_host = 'https://s3-ここにリージョン名を入れます(※例、us-east-1).amazonaws.com/chatspace-images-upload'
 end
