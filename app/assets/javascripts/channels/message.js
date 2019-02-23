@@ -58,6 +58,10 @@ $(function(){
     e.preventDefault();
     var formData = new FormData(this);
     var url = $(this).attr('action');
+    if ($('#message_body').val() == "" && $('#file-input')[0].files['length'] == 0) {
+      alert('メッセージを入力してください');
+      return;
+    }
 
     $.ajax({
       url: url,
