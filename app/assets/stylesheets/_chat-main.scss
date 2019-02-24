@@ -67,6 +67,9 @@
       border: none;
       margin-left: 15px;
       float: right;
+      &:hover {
+        cursor: pointer;
+      }
     }
     .fa-image {
       font-size: 25px;
