@@ -1,6 +1,5 @@
 $(function(){
   function buildNewMessageHTML(message){
-
     var img = "";
     if (message.image["url"] !== null) {
         img = `<img class="message__lower-image" src="${message.image.url}">`;
@@ -57,6 +56,13 @@ $(function(){
 
   $('#new_message').on('submit', function(e){
     e.preventDefault();
+
+    if ($('#message_body').val() == "" && $('#file-input')[0].files[0] == null) {
+      alert('メッセージを入力してください');
+      location.reload();
+      return;
+    }
+
     var formData = new FormData(this);
     var url = $(this).attr('action');
 
@@ -69,7 +75,6 @@ $(function(){
       contentType: false
     })
     .done(function(message){
-      var html = buildNewMessageHTML(message);
       appendNewMessageHTML(message);
       $('.chat-main__footer-form-text').val('');
       changeMessageFormStyle("type a message", "black");
