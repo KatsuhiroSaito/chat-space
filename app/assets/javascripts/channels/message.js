@@ -35,7 +35,9 @@ $(function(){
   };
 
   function resetFileInput() {
-
+    $('#file-input').after('<input id="file-input-new" type="file" name="message[image]">')
+    $('#file-input').remove();
+    $('#file-input-new').attr('id', 'file-input');
   };
 
   function auto_update() {
