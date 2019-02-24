@@ -34,7 +34,7 @@ $(function(){
     $('.chat-main__footer-form-text').attr('placeholder', placeholder_text);
   };
 
-  function resetFileInput() {
+  function clearFileInput() {
     $('#file-input').after('<input id="file-input-new" type="file" name="message[image]">')
     $('#file-input').remove();
     $('#file-input-new').attr('id', 'file-input');
