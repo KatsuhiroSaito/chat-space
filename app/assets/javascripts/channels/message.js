@@ -34,6 +34,12 @@ $(function(){
     $('.chat-main__footer-form-text').attr('placeholder', placeholder_text);
   };
 
+  function clearFileInput() {
+    $('#file-input').after('<input id="file-input-new" type="file" name="message[image]">')
+    $('#file-input').remove();
+    $('#file-input-new').attr('id', 'file-input');
+  };
+
   function auto_update() {
     if($('.message')[0]) {
       var latest_message_id = $('.message:last').attr('data-id');
@@ -78,6 +84,7 @@ $(function(){
       appendNewMessageHTML(message);
       $('.chat-main__footer-form-text').val('');
       changeMessageFormStyle("type a message", "black");
+      clearFileInput();
     })
     .fail(function() {
       alert('error');
