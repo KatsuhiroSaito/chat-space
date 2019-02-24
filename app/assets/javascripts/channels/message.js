@@ -59,6 +59,7 @@ $(function(){
 
     if ($('#message_body').val() == "" && $('#file-input')[0].files[0] == null) {
       alert('メッセージを入力してください');
+      location.reload();
       return;
     }
 
