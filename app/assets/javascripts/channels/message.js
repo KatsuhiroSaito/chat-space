@@ -84,6 +84,7 @@ $(function(){
       appendNewMessageHTML(message);
       $('.chat-main__footer-form-text').val('');
       changeMessageFormStyle("type a message", "black");
+      clearFileInput();
     })
     .fail(function() {
       alert('error');
