@@ -34,6 +34,10 @@ $(function(){
     $('.chat-main__footer-form-text').attr('placeholder', placeholder_text);
   };
 
+  function resetFileInput() {
+
+  };
+
   function auto_update() {
     if($('.message')[0]) {
       var latest_message_id = $('.message:last').attr('data-id');
